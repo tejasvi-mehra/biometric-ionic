@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+// import { ListPage } from '../pages/list/list';
 import { LoginpagePage } from '../pages/loginpage/loginpage';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -17,7 +17,7 @@ import { UtilityProvider } from '../providers/utility/utility';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
+    // ListPage,
     LoginpagePage
   ],
   imports: [
@@ -28,7 +28,7 @@ import { UtilityProvider } from '../providers/utility/utility';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
+    // ListPage,
     LoginpagePage
   ],
   providers: [

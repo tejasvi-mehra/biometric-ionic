@@ -52,23 +52,17 @@ export class LoginpagePage {
           localizedReason: 'Please Authenticate' //Only for iOS
         })
         .then((result: any) => {
-          console.log(result);
-          if(result == "Success"){
+          console.log("result:"+JSON.stringify(result));
           //Fingerprint/Face was successfully verified            
           //Go to dashboard
-          this.setAndGet.UserName = this.data.userName;
-          this.navCtrl.setRoot("DashboardPage")
-          }
-          else {
-          //Fingerprint/Face was not successfully verified                      
-            this.utility.presentAlert(result);
-            console.log(result);
-          }
+            this.setAndGet.UserName = this.data.userName;
+            console.log("Fingerprint verified");
+            this.navCtrl.setRoot("DashboardPage")
         })
         .catch((error: any) => {
-          //Fingerprint/Face was not successfully verified          
+          //Fingerprint/Face was not successfully verified                
           this.utility.presentAlert(error);
-          console.log(error);
+          console.log("error:"+error);
         });
       }
       else {
